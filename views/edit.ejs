@@ -1,0 +1,66 @@
+<%- include("partials/header.ejs") %>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+  }
+
+
+    input[type="submit"] {
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 25%;
+    border: 1px solid #607274;
+    border-radius: 4px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    
+  }
+
+  #updateButton {
+    background-color: #14A44D;
+  }
+  #updateButton :hover {
+   background-color : #0d7637;
+  }
+
+  #deleteButton {
+    background-color: rgba(255, 0, 0, 0.767);
+  }
+  #updateButton :hover {
+   background-color :rgba(180, 0, 0, 0.767);
+  }
+
+</style>
+<%# editing form %>
+ 
+
+    <div class="container py-3">
+        
+            <h2>Edit Post</h2>
+                <form action="/update" method="POST">
+                    <div >
+                        <input class="form-control mb-2" type="text" name="title" id="title" placeholder="title" value="<%= title %>" style="width:50%" required>
+                        <textarea class="form-control" name="content" id="txtarea"  cols="30" rows="18" placeholder="Content" style="resize: none;"><%= content %></textarea>
+                        <input hidden type="text" name="index" value="<%= postId %>">
+                    </div>
+                    <div>
+                        <input id="updateButton" type="submit" value="Update Post">
+                    </div>
+                </form> 
+                    <div>
+                        <form action="/delete" method="POST">
+                            <input type="text" name="postId" hidden value="<%= postId %>">
+                            <input id="deleteButton" type="submit" name="delete" value="Delete Post">
+                        </form>
+                    </div>
+                    
+        
+    </div>
+        
+<%- include("partials/footer.ejs") %>

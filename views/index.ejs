@@ -1,0 +1,54 @@
+<%- include("partials/header.ejs") %>
+
+<body>
+    
+<div class="container py-4">
+    <div class="container-fluid my-4 mx-5 py-5">
+        <h3 class="display-5 ">Write whatever is in your head</h3>
+        <p class="col-md-8 fs-4">Allow it to flow with no thought for spelling, grammar, proper form. Whatever you write will be right: it is yours, and no one else need read it.</p>
+        
+        <form  action="/write">
+            <input id="writeButton" type="submit" value="Write A New Post">
+        </form>
+    </div>
+<%#  </div> now in the end %>
+
+
+<%# from the bootstrap %>
+
+    <div class="container px-4 py-5" id="icon-grid">
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 py-5">
+
+
+            <% if (posts.length === 0) { %>
+                    <div class="col d-flex align-items-start">
+                        <div>
+                            <p>Your posts are gonna be here</p>
+                        </div>
+                    </div>
+
+            <% } else { %>
+                <% posts.forEach((post,index) => { %>   
+                    
+                        <div class="card overflow-hidden rounded-2">
+                            <div class="d-flex flex-column p-5 pb-3 text-shadow-1">
+                                <h3 class="fw-bold mb-0 fs-4 text-body-emphasis"><%= post.title %></h3>
+                                <p><%= post.date %></br><%= post.cardContent %></p>
+                                <p><a href="/view/<%= index %>" class="card-link">View</a></p>
+                                <p><a href="/edit/<%= index %>" class="card-link">Edit</a></p>
+                            </div>
+                          </div>
+                    
+                <% }); %>
+            <% } %> 
+        </div>   
+    </div> 
+        
+
+    <%- include("partials/footer.ejs") %>
+    
+</div>
+
+</body>
+</html>

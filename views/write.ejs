@@ -1,0 +1,45 @@
+<%- include("partials/header.ejs") %>
+
+<%# writing form %>
+ 
+<div class="container py-3">
+        <form action="/submit" method="POST">
+            <div >
+                <input class="form-control mb-2" type="text" name="title" id="title" placeholder="title" required>
+                <textarea class="form-control" name="content" id="txtarea"  id="floatingTextarea2" placeholder="and the rest" style="height: 300px"></textarea>
+            </div>
+            <div>
+                <input type="submit" value="Upload">
+                </form>
+            </div>
+        </form>
+    
+
+
+<%# HELPERS TO WRITE %>
+
+    <div class="row align-items-md-stretch p-5">
+        <div class="col-md-6 px-5 mb-3">
+            <div class="p-3 bg-body-tertiary border rounded-3">
+            <h5>If you do not have any ideas:</h5><hr>
+            <p>Choose the first event which comes to mind</p>
+            <p>Proper form does not matter</p>
+            <p>Consider it fiction</p> 
+            <p>Allow reactions, emotional responses, feelings</p>
+            </div>
+        </div>
+    
+        <div class="col-md-6 px-5 mb-3">
+            <div class="p-3 bg-body-tertiary border rounded-3">
+            <h5>This may help also:</h5><hr>
+            <p>Name three things you're grateful for</p>
+            <p>Three amazing things that happened today</p>
+            <p>What would make today great?</p>
+            <p>How could You have made today even better?</p>
+        </div>
+    </div>
+</div>
+
+<%- include("partials/footer.ejs") %>
+
+

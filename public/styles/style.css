@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; 
+  }
+
+  
+  input[type="submit"] {
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 25%;
+    border: 1px solid #607274;
+    border-radius: 4px;
+    background-color: #14A44D;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  } 
+
+  input[type="submit"]:hover {
+   background-color : #0d7637;
+  }
+  
+
+ #title {
+  width: 50%;
+  padding: auto;
+ }
+
+#writeButton {
+    margin-left: auto;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+.myContainer {
+      height: 100px;
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      
+  }
+
+.myCard {
+  border: 1px solid #ababab;
+  border-radius: 6px;
+
+}
+  
+  
+h1 {
+    margin: 10;
+    color: #191919;
+  }
+  
+#writeButton {
+    color: #faf8f8;
+  }
+
